@@ -30,3 +30,34 @@ VBout&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;>>&nbsp;&nbsp;&nbsp;&nbsp;&
 ![image](https://github.com/SilasYoome/InterruptEncoder/blob/main/1920px-Quadrature_Diagram.svg.png)
 
 
+由此以上可知順時針與逆時針旋轉時，兩個腳位的狀態變化
+###### 順時針旋轉時
+
+| pluse  | AVout |BVout
+| ------------- |:-------------:|:-------------:|
+| 1      | 1|0|
+| 2      | 1|1|
+| 3      | 0|1|
+| 4      | 0|0|
+###### 逆時針旋轉時
+
+| pluse  | AVout |BVout
+| ------------- |:-------------:|:-------------:|
+| 1      | 0|1|
+| 2      | 1|1|
+| 3      | 1|0|
+| 4      | 0|0|
+
+
+
+#### 程式碼部份
+`flagA`與`flagB`兩個變數用來判別現在是在順時針旋轉還是逆時針旋轉
+
+若是由AVout先觸發，改變狀態成為1，就是順時針旋轉，`flagA`改變成1，`flagB`維持0
+
+若是由BVout先觸發，改變狀態成為1，就是逆時針旋轉，`flagB`改變成1，`flagA`維持0
+
+透過`flagA`與`flagB`狀態去控制主要計數變數`count`是要++ or --
+
+並在兩個都同時結束時的狀態：AVout與BVout狀態都為0時，將`flagA  flagB`歸零
+
