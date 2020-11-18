@@ -26,3 +26,5 @@ VBout&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;>>&nbsp;&nbsp;&nbsp;&nbsp;&
 相反的，若是逆時針旋轉編碼器，則是先由感測腳B感測，然後是A感測腳。
 
 因此順時針與逆時針時的輸出波形如下： 
+
+![image](https://github.com/SilasYoome/InterruptEncoder/blob/main/1920px-Quadrature_Diagram.svg.png)
